@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAcudiente, createAcudiente } from '../controllers/acudiente.controller.js';
+import { getAcudiente, createAcudiente } from '../controller/acudiente.controller.js';
 
 const route = express.Router();
 

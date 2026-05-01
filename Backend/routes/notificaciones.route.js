@@ -1,5 +1,5 @@
 import express from 'express';
-import { getNotificacion, createNotificacion } from '../controllers/notificacion.controller.js';
+import { getNotificacion, createNotificacion } from '../controller/notificacion.controller.js';
 
 const route = express.Router();
 

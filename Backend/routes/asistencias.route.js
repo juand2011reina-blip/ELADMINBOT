@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAsistencia, createAsistencia } from '../controllers/asistencia.controller.js';
+import { getAsistencia, createAsistencia } from '../controller/asistencia.controller.js';
 
 const route = express.Router();
 
