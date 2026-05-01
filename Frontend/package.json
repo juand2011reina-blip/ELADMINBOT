@@ -12,6 +12,6 @@
     "vite": "^8.0.1"
   },
   "dependencies": {
-    "toastify": "^2.0.0"
+    "toastify-js": "^1.12.0"
   }
 }

@@ -5,8 +5,8 @@ import {
   mostrarError,
   limpiarError
 } from "../../shared/js/utils.js";
-import Toastify from "toastify-js";
-import "./toastify-js/src/toastify.css";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 const form = document.querySelector(".login-form");
 const emailInput = document.getElementById("email");

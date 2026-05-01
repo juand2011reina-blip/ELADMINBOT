@@ -44,7 +44,7 @@ export const login = async (req,res)=>{
         return res.status(500).json({
             ok:false,
             message: "Error del servidor",
-            error: err
+            error: err.error || err.message
         })
     }
 }
