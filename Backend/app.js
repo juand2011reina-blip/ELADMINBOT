@@ -13,7 +13,7 @@ import dashboardRoutes from "./routes/dashboard.route.js";
 import whatsappRoutes from "./modules/whatsapp/whatsapp.routes.js";
 
 const app = express();
-app.use(cors())
+                        app.use(cors())
 app.use(express.json())
 const PORT = 3000
 //Rutas
