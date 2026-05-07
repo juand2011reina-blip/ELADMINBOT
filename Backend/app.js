@@ -8,8 +8,9 @@ import pagoRoutes from './routes/pagos.route.js';
 import usuarioRoutes from './routes/usuarios.route.js';
 import asistenciaRoutes from './routes/asistencias.route.js';
 import notificacionRoutes from './routes/notificaciones.route.js';
-import authRoutes from "./routes/auth.route.js"
-import dashboardRoutes from "./routes/dashboard.route.js"
+import authRoutes from "./routes/auth.route.js";
+import dashboardRoutes from "./routes/dashboard.route.js";
+import whatsappRoutes from "./modules/whatsapp/whatsapp.routes.js";
 
 const app = express();
 app.use(cors())
@@ -24,6 +25,7 @@ app.use('/api', asistenciaRoutes);
 app.use('/api', notificacionRoutes);
 app.use("/api",authRoutes)
 app.use("/api", dashboardRoutes)
+app.use("/api", whatsappRoutes)
 
 //ruta base
 app.get("/", (req, res)=>{
