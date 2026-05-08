@@ -7,9 +7,12 @@ export const sendWhatsappMessage = async (phone, message) => {
       {
         messaging_product: "whatsapp",
         to: phone,
-        type: "text",
-        text: {
-          body: message,
+        type: "template",
+        template: {
+          name: message,
+          language: {
+            code: "en_US",
+          }
         },
       },
       {
