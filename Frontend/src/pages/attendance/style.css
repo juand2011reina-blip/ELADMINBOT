@@ -1,0 +1,92 @@
+.attendance-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 30px;
+    align-items: flex-end;
+    padding: 20px;
+    background: var(--panel-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+/* Estilo para etiquetas si las usas en el HTML */
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="date"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus {
+    border-color: var(--accent-color);
+}
+
+.attendance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.student-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-check:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-status {
+    width: 44px;
+    height: 24px;
+    background: #444;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* El círculo del switch */
+.toggle-status::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-status.active {
+    background: var(--success-color);
+}
+
+.toggle-status.active::after {
+    transform: translateX(20px);
+}

@@ -1,0 +1,74 @@
+.alert-card {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    background: var(--bg-card, rgba(0, 0, 0, 0.8));
+    backdrop-filter: blur(10px); /* Efecto cristal */
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+/* Indicador de color lateral para prioridad */
+.alert-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--accent-color, #3b82f6);
+    border-radius: 4px 0 0 4px;
+}
+
+.alert-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: var(--bg-card, #f53030);
+}
+
+.alert-icon {
+    font-size: 1.25rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--accent-rgb, 59, 130, 246), 0.1);
+    border-radius: 10px;
+}
+
+.alert-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.alert-info strong {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.alert-time {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    opacity: 0.7;
+}
+
+/* Variación para alertas urgentes */
+.alert-card.urgent::before {
+    background: var(--danger-color, #ef4444);
+}
+
+.alert-card.urgent .alert-icon {
+    background: rgba(239, 68, 68, 0.1);
+}

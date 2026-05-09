@@ -1,0 +1,65 @@
+.table-container {
+    margin-top: 30px;
+    overflow-x: auto;
+    border-radius: 15px; /* Redondeado contenedor */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+table {
+    width: 100%;
+    border-spacing: 0; /* Mejor que collapse para bordes redondeados */
+    background: var(--panel-bg);
+    color: var(--text-main);
+    font-family: inherit;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background: rgba(0, 0, 0, 0.02); /* Diferenciación sutil */
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+/* Eliminar borde en la última fila para estética limpia */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Efecto de iluminación al pasar el mouse */
+tbody tr:hover {
+    background-color: rgba(var(--primary-rgb), 0.03);
+    transition: background 0.2s ease;
+}
+
+/* Badges con mejor contraste y estilo */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 8px; /* Estilo más moderno que el pill */
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.status-al-dia { 
+    background: rgba(77, 255, 136, 0.15); 
+    color: #2ecc71; 
+}
+
+.status-pendiente { 
+    background: rgba(255, 204, 77, 0.15); 
+    color: #f39c12; 
+}
+
+.status-ausente { 
+    background: rgba(231, 76, 60, 0.15); 
+    color: #e74c3c; 
+}

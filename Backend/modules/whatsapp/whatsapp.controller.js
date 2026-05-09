@@ -10,14 +10,15 @@ export const sendMessage = async (req,res)=>{
 
         res.status(200).json({
             ok:true,
-            data
+            message:"mensaje enviado",
+            data:data
         })
     }
     catch(error){
 
         res.status(500).json({
             ok:false,
-            text: "error en el servidor",
+            message: "error en el servidor",
             err: error
         })
     }

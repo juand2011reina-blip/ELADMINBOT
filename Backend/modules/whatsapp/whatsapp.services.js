@@ -9,7 +9,7 @@ export const sendWhatsappMessage = async (phone, message) => {
         to: phone,
         type: "template",
         template: {
-          name: message,
+          name: "hello_world",
           language: {
             code: "en_US",
           }
